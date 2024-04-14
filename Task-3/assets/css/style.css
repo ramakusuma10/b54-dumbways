@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family:  Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  background-color: #cac4c4;
+  justify-content: center;
+  display: flex;
+} 
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #dbdbdb;
+  padding-inline: 5px;
+  padding-block: 5px;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+}
+
+nav .navbar-left ul {
+  display: flex;
+  align-items: center;
+  
+}
+
+nav .navbar-left ul img {
+  margin-right: 50px;
+}
+
+nav .navbar-left ul li {
+  list-style-type: none;
+  margin-right: 30px;
+}
+
+nav .navbar-left ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav .navbar-left ul .active a {
+  color: #157aa8;
+  font-weight: bold;
+}
+
+nav .navbar-right a {
+  text-decoration: none;
+  background-color:#157aa8;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-right: 10px ;
+}
+
+.form-center{
+  width: 25%;
+  margin: 100px 100px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.form-input{
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+form div {
+  margin-top: 15px;
+}
+
+form div #subject{
+  width: 622px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid #dbdbdb;
+  background-color: #dbe4c6;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3)
+}
+
+input{ 
+  font-family:  Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+select, option{
+  font-family:  Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+  font-family:  Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+form div button {
+  background-color: #157aa8;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 500px;
+  cursor: pointer;
+}
+
+.cardContainer {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+}

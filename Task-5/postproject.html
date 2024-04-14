@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Project</title>
+    <link rel="stylesheet" href="./assets/css/postblog.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/fontawesome/fontawesome/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="navbar-left">
+        <ul>
+          <img src="./assets/img/logo-brand.png" alt="logo-brand" />
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="active">
+            <a href="./postproject.html">My Project</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <a href="./contactForm.html">Contact Me</a>
+      </div>
+    </nav>
+    <div class="form-center">
+      <h1>Add My Project</h1>
+      <form action="" class="form-input">
+        <div>
+          <label for="projectname">Project Name</label>
+          <input type="text" id="projectname" />
+        </div>
+
+        <div class="date-group">
+          <div class="start-date">
+            <label for="start-date">Start Date</label>
+            <input type="date" id="start-date" />
+          </div>
+          <div class="end-date">
+            <label for="end-date">End Date</label>
+            <input type="date" id="end-date" />
+          </div>
+        </div>
+
+        <div>
+          <label for="description">Description</label>
+          <textarea id="description"></textarea>
+        </div>
+        <div>
+          <label for="technologises">Technologises</label>
+        </div>
+        <div class="checkboxs">
+          <div class="checkbox-group">
+            <input
+              type="checkbox" value="node-js" class="checkbox" id="nodejs"
+            />
+            <label for="nodejs">Node JS</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" value="react" class="checkbox" id="reactjs"/>
+            <label for="reactjs">React JS</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" value="vuejs" class="checkbox" id="vuejs" />
+            <label for="vuejs">Vue JS</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" value="js" class="checkbox" id="javascript" />
+            <label for="javascript">Javascript</label>
+          </div>
+        </div>
+        <div>
+          <label for="input-image">Upload image</label>
+          <input type="file" id="input-image"/>
+        </div>
+
+        <div>
+          <button type="button">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="wrapper projects">
+      <h1>MY PROJECTS</h1>
+      <div class="showlist"></div>
+    </div>
+
+
+    <script src="./script/postproject.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/c64e7a230f.js" crossorigin="anonymous"></script>
+  </body>
+</html>
