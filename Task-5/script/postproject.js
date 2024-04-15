@@ -1,7 +1,7 @@
 import { projects } from "./datadummy.js"
 
 window.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector('.form-input')
+    let form = document.querySelector('.form-input')
 
     form.addEventListener('submit', (event) => {
         event.preventDefault()
@@ -16,13 +16,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
 function formHandler(projects) {
     const Name = document.getElementById('projectname').value
-    const StartDate = document.getElementById('start-date').value
-    const EndDate = document.getElementById('end-date').value
+    let StartDate = document.getElementById('start-date').value
+    let EndDate = document.getElementById('end-date').value
+    const Summary = document.getElementById('summary').value
     const Description = document.getElementById('description').value
     const Image = document.getElementById('input-image').files[0]
     const Checkboxs = document.querySelectorAll('.checkbox')
 
-
+    
     const project = {
 
         id: projects.length + 1,
@@ -33,6 +34,24 @@ function formHandler(projects) {
         description: Description,
         image: getImageURL(Image),
         technologies: getTechs(Checkboxs)
+    }
+
+    if (Name === "") {
+        return alert("Please entered your title!")
+    } else if (StartDate === "") {
+        return alert("Please entered your startdate!")
+    } else if (EndDate === "") {
+        return alert("Please entered your enddate!")
+    } else if (Summary === "") {
+        return alert("Please entered your content!")
+    } else if (Description === "") {
+        return alert("Please entered your content!")
+    } else if ( getImageURL(Image) === "") {
+        return alert("Please entered your image!")
+    }
+
+    if (StartDate > EndDate) {
+        return alert("The end date cannot be less than the start date")
     }
     renderProject(project)
 }
@@ -56,8 +75,8 @@ function getTechs(checkboxs) {
 function renderProject(project) {
     const showlist = document.querySelector('.showlist')
 
-    const duration = getDuration(project.startDate, project.endDate)
-    const Template = cardCreator({
+    let duration = getDuration(project.startDate, project.endDate)
+    let Template = cardCreator({
         ...project,
         duration: duration
     })
@@ -66,11 +85,37 @@ function renderProject(project) {
 }
 
 function getDuration(startDate, endDate) {
-    return '2 months'
+
+    let startDatePart = startDate.split("/")
+    let endDatePart = endDate.split("/")
+
+    let formatStartDate = startDatePart[2] + "-" + startDatePart[1] + "-" + startDatePart[0]
+    let formatEndtDate = endDatePart[2] + "-" + endDatePart[1] + "-" + endDatePart[0]
+
+    let newStartDate = new Date(formatStartDate)
+    let newEndtDate = new Date(formatEndtDate)
+
+    let timeDifference = newEndtDate - newStartDate
+    let differenceInDays = Math.floor(timeDifference / (1000 * 60 * 60 * 24))
+    let differenceInMonths = Math.floor(differenceInDays / 30.44)
+    
+    let differenceInYears = Math.floor(differenceInMonths / 12)
+
+    let duration;
+
+    if (differenceInYears > 0) {
+        duration = `${differenceInYears} years`
+    } else if (differenceInMonths > 0) {
+        duration = `${differenceInMonths} month`
+    } else {
+        duration = `${differenceInDays} days`
+    }
+
+    return duration
 }
 
 function cardCreator(project) {
-    const { id, name, duration, summary, technologies, image } = project
+    let { id, name, duration, summary, technologies, image } = project
 
     return (
         `
