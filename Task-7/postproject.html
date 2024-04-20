@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Project</title>
+    <link rel="stylesheet" href="./assets/css/postblog.css" />
+    <link rel="stylesheet" href="./assets/css/nav.css" />
+  </head>
+  <body>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <img src="./assets/img/logo-brand.png" class="nav-logo" alt="" />
+        <ul>
+          <li>
+            <a href="index.html" class="nav-item">Home</a>
+          </li>
+          <li>
+            <a href="postproject.html" class="nav-item active">My Project</a>
+          </li>
+          <li>
+            <a href="testimonial.html" class="nav-item">Testimonial</a>
+          </li>
+          <li>
+            <a href="contactForm.html" class="nav-item nav-contact"
+              >Contact Me</a
+            >
+            <i class="fa-solid fa-bars nav-item hamburger-btn"></i>
+          </li>
+        </ul>
+      </nav>
+      <nav class="hamburger">
+        <ul>
+          <li>
+            <a href="index.html" class="ham-item">Home</a>
+          </li>
+          <li>
+            <a href="postproject.html" class="ham-item">My Project</a>
+          </li>
+          <li>
+            <a href="testimonial.html" class="ham-item">Testimonial</a>
+          </li>
+          <li>
+            <a href="contactForm.html" class="ham-item">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="form-center">
+      <h1>Add My Project</h1>
+      <form action="" class="form-input">
+        <div>
+          <label for="projectname">Project Name</label>
+          <input type="text" id="projectname" />
+        </div>
+
+        <div class="date-group">
+          <div class="start-date">
+            <label for="start-date">Start Date</label>
+            <input type="date" id="start-date" />
+          </div>
+          <div class="end-date">
+            <label for="end-date">End Date</label>
+            <input type="date" id="end-date" />
+          </div>
+        </div>
+
+        <div>
+          <label for="description">Description</label>
+          <textarea id="description"></textarea>
+        </div>
+        <div>
+          <label for="technologises">Technologises</label>
+        </div>
+        <div class="checkboxs">
+          <div class="checkbox-group">
+            <input
+              type="checkbox" value="node-js" class="checkbox" id="nodejs"
+            />
+            <label for="nodejs">Node JS</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" value="react" class="checkbox" id="reactjs"/>
+            <label for="reactjs">React JS</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" value="vuejs" class="checkbox" id="vuejs" />
+            <label for="vuejs">Vue JS</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" value="js" class="checkbox" id="javascript" />
+            <label for="javascript">Javascript</label>
+          </div>
+        </div>
+        <div>
+          <label for="input-image">Upload image</label>
+          <input type="file" id="input-image"/>
+        </div>
+
+        <div>
+          <button type="button">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="wrapper projects">
+      <h1>MY PROJECTS</h1>
+      <div class="showlist"></div>
+    </div>
+
+
+    <script src="./script/postproject.js" type="module"></script>
+    <script src="./script/nav.js"></script>
+
+    <script src="https://kit.fontawesome.com/c64e7a230f.js" crossorigin="anonymous"></script>
+  </body>
+</html>
