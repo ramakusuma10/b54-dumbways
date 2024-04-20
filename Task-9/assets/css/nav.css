@@ -1,0 +1,127 @@
+
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    background-color: whitesmoke;
+    padding-inline: 30px;
+    padding-block: 10px;
+    position: fixed;
+    align-items: center;
+    z-index: 1000;
+}
+
+.navbar ul {
+    padding-left: 4rem;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    padding: 0;
+    list-style-type: none;
+}
+
+.navbar ul li:last-child {
+    margin-left: auto;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: opacity .3s ease;
+}
+
+.nav-item:hover {
+    opacity: .8;
+    transition: opacity .3s ease;
+}
+
+.nav-item.active {
+    font-weight: 800;
+}
+.nav-contact {
+    font-weight: 400;
+    padding-block: .5rem;
+    padding-inline: 1.2rem;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.hamburger-btn {
+    display: none !important;
+    font-size: 25px;
+}
+.nav-logo {
+    width: 50px;
+}
+.invisible {
+    display: none;
+}
+.hamburger {
+    display: none;
+}
+
+
+@media screen and (max-width: 576px) {
+  .hamburger {
+        display: block;
+        height: 0;
+        margin-top:40px;
+        width: 100%;
+        background-color:lightgray;
+        transition: height .3s ease-in-out;
+       
+        
+    }
+  .hamburger ul {
+        margin-top: 45px;
+        padding: 0;
+        transform: translateY(-120%);
+        transition: transform .3s ease-in-out;
+    }
+  .hamburger ul li {
+        list-style-type: none;
+        width: 100%;
+    }
+  .hamburger ul li a {
+        text-decoration: none;
+        padding-block: 10px;
+        color: black;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        transition: all .3s ease-in-out;
+    }
+  .hamburger ul li a:hover {
+        background-color: black;
+        color: white;
+        transition: all .3s ease-in-out
+    }
+  .collapse {
+        height: auto;
+        transition: height .3s ease-in-out;
+    }
+  .collapse ul {
+        transform: translateY(0);
+        transition: transform .3s ease-in-out;
+    }
+  .nav-item {
+        display: none;
+    }
+  .hamburger-btn {
+        display: block!important;
+        cursor: pointer;
+  }
+}
+
+
