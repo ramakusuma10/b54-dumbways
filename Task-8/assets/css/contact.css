@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:  Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    background-color: #eee9e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+.form-center{
+    width: 45%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: center;
+
+}
+
+.form-input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 10px;
+    gap:20px;
+    
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid #dbdbdb;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3)
+}
+
+input{ 
+  font-family:  Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+label {
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  margin: 0;
+}
+
+select, option{
+  font-family:  Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+  font-family:  Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+div button {
+  background-color: black;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  float: right;
+}
+
+@media screen and (max-width: 996px) {
+    h1 {
+        font-size: 30px;
+    }
+    label {
+        font-size: 15px;
+    }
+    .form-center {
+        width: 40%;   
+    }
+}
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 15px;
+    }
+
+    .form-center {
+        width: 80%;
+        margin-top: 60px;
+    }
+
+    input,
+    textarea,
+    select {
+        padding-block: 5px;
+    }
+}    
