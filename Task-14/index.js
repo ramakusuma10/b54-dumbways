@@ -46,7 +46,7 @@ app.post('/addproject', async(req, res) => {
     req.body
     const ArrTechnologies = technologies.join(',')
 
-    const query = `INSERT INTO projects (name, "startDate", "endDate", summary, description, technologies, image, "createdAt","UpdatedAt") VALUES ('${name}', '${startDate}', '${endDate}', '${summary}', '${description}', '{${ArrTechnologies}}', '/assets/img/image1.jpg', now() , now())`
+    const query = `INSERT INTO projects (name, "startDate", "endDate", summary, description, technologies, image, "createdAt","updatedAt") VALUES ('${name}', '${startDate}', '${endDate}', '${summary}', '${description}', '{${ArrTechnologies}}', '/assets/img/image1.jpg', now() , now())`
     await sequelize.query(query, { type: QueryTypes.INSERT })
 
     console.log("data :",query)

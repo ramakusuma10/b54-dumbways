@@ -1,4 +1,4 @@
-import { getTesti} from "./data/url"
+import { getTesti} from "../data/url"
 
 window.addEventListener('DOMContentLoaded', () => {
 

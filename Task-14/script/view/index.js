@@ -3,7 +3,7 @@ document.querySelectorAll('.btn-warning').forEach((deleteBtn) => {
         const id = deleteBtn.dataset.id
         const baseUrl = window.location.origin
 
-        await fetch(`${baseUrl}/postproject/${id}`, {
+        await fetch(`${baseUrl}/addproject/${id}`, {
             method: 'DELETE',
         })
 
