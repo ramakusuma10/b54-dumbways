@@ -1,0 +1,74 @@
+.wrapper.project-detail {
+    width: 75%;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .detail-header {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .detail-image {
+    width: 60%;
+    object-fit: cover;
+  }
+  .detail-info {
+    width: 40%;
+  }
+  .detail-info h2 {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .detail-info i {
+    font-size: 25px;
+    color:black;
+  }
+  .detail-date-group,
+  .detail-duration-group {
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+  }
+  .detail-date-group p,
+  .detail-duration-group p {
+    margin: 0;
+  }
+  .detail-duration-group p {
+    margin-left: -3px;
+  }
+  .detail-duration-group {
+    margin-bottom: 2rem;
+  }
+  .detail-tech-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+  }
+  .tech-icon-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .tech-icon-group i {
+    font-size: 2rem;
+    font-weight: 500;
+    color: black;
+  }
+  .tech-icon-group p {
+    margin: 0;
+  }
+  .detail-body {
+    margin-bottom: 3rem;
+  }
+  .detail-body h2 {
+    margin-bottom: 1rem;
+  }
+  .detail-desc {
+    text-align: justify;
+  }
