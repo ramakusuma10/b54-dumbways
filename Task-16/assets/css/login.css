@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+  }
+  
+    body {
+      margin: 0;
+      font-family:  Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+      background-color:#eee9e9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    } 
+  
+    .form-center{
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 40px;
+      align-items: center;
+      margin-top: 60px;
+      margin-left: 40px;
+    }
+  
+    .form-input{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+    form div {
+      margin-top: 20px;
+    }
+
+    form div button {
+        background-color: black;
+        padding: 10px 40px;
+        border: none;
+        border-radius: 15px;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        margin: auto;
+        margin-top: 10px;
+        cursor: pointer;
+        float: right;
+      }
